@@ -113,8 +113,21 @@
               "devServerTarget": "tietoevry:serve:production"
             }
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
-    }},
-  "defaultProject": "tietoevry"
+    }
+  },
+  "defaultProject": "tietoevry",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
