@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { JsonCallService } from './json-call.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tietoevry';
-  number = 'null';
+  number: number = null;
+  constructor(private service: JsonCallService) { }
 
-  public callBackend(){
-
+  public callBackend() {
+    this.service.callAPI(this.number);
   }
 }

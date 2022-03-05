@@ -7,13 +7,13 @@ import { JsonData } from './json-data.type';
 })
 export class JsonCallService {
 
-  private apiUrl = 'http>://localhost:3001';
+  private apiUrl = 'http://localhost:3001/items';
 
   constructor(private http: HttpClient) { }
 
   public callAPI(number: number) {
     return this.http.get(this.apiUrl)
-      .subscribe((data: JsonData) => console.log);;
+      .subscribe((data: JsonData) => console.log);
   }
 
 }
